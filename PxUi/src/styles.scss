@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+@use './tailwind.css';
+@use './assets/layout/layout.scss';
+@use 'primeicons/primeicons.css';
+@use './assets/demo/demo.scss';
+
+.text-primary {
+    --tw-text-opacity: 1;
+    color: color-mix(in srgb, var(--primary-color) calc(100% * var(--tw-text-opacity, 1)), transparent);
+}
+
+.widget {
+    background: #fff;
+    border: 1px solid #cccccc;
+    box-shadow: 0 4px 14px #0000000d;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.widget .title {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3d3a38;
+}
+
+.widget .subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3d3a38;
+}
+
+.widget .divider {
+    border-top: 1px dashed #fff;
+}
+
+.widget .link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: var(--px-primary);
+}
+
+.widget .link:hover {
+    color: color-mix(in srgb, var(--primary-color) calc(100% * var(--tw-text-opacity, 1)), transparent);
+    cursor: pointer;
+}
+
+.widget .no-data {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    color: var(--px-dark-two);
+    opacity: 0.5;
+}
+
+.widget .chart .element:hover {
+    cursor: pointer;
+}
+
+.widget .chart .no-data {
+    min-height: 212px;
+}
+
+.widget .items .no-data {
+    min-height: 84px;
+}
+
+.widget .items .item {
+    font-weight: 400;
+    font-size: 16px;
+    height: 18px;
+    color: #777776;
+}
+
+.widget .items .item:focus {
+    background-color: #dddddd;
+    outline: none;
+    border-radius: 3px;
+}
+
+.widget .items .item:hover {
+    cursor: pointer;
+    color: color-mix(in srgb, var(--primary-color) calc(100% * var(--tw-text-opacity, 1)), transparent);
+}
+
+.widget .items .item i {
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    color: color-mix(in srgb, var(--primary-color) calc(95% * var(--tw-text-opacity, 1)), transparent);
+}
+
+.widget .items .item:hover i {
+    cursor: pointer;
+    color: color-mix(in srgb, var(--primary-color) calc(100% * var(--tw-text-opacity, 1)), transparent);
+}
+
+.px-label {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 0px;
+    color: #3d3a38;
+}
+

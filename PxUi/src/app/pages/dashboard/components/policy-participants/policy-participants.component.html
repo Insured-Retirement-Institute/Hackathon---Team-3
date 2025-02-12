@@ -1,0 +1,18 @@
+<p-table [value]="participants() ?? []" [paginator]="true" [rows]="10" responsiveLayout="scroll" stripedRows showGridlines size="small">
+    <ng-template #header>
+        <tr>
+            <th pSortableColumn="ClientName">Name <p-sortIcon field="ClientName"></p-sortIcon></th>
+            <th pSortableColumn="ClientType">Type <p-sortIcon field="ClientType"></p-sortIcon></th>
+            <th pSortableColumn="ClientState">State <p-sortIcon field="ClientState"></p-sortIcon></th>
+            <th pSortableColumn="ClientAge">Age <p-sortIcon field="ClientAge"></p-sortIcon></th>
+        </tr>
+    </ng-template>
+    <ng-template #body let-participant>
+        <tr>
+            <td style="width: 25%; min-width: 8rem">{{ participant.ClientName ?? noData }}</td>
+            <td style="width: 25%; min-width: 8rem">{{ participant.ClientType ?? noData }}</td>
+            <td style="width: 25%; min-width: 8rem">{{ participant.ClientState ?? noData }}</td>
+            <td style="width: 25%; min-width: 8rem">{{ participant.ClientAge ?? noData }}</td>
+        </tr>
+    </ng-template>
+</p-table>

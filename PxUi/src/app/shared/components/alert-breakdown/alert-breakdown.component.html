@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="flex justify-between items-center mb-6">
+        <div class="font-semibold text-xl">Alerts</div>
+    </div>
+    <ul class="list-none p-0 m-0">
+        @for (alert of alertBreakdown; track alert.alert) {
+            <li class="flex flex-col md:flex-row md:items-center md:justify-between mb-6" (click)="alertSelected(alert)">
+                <div>
+                    <span class="text-surface-900 dark:text-surface-0 font-medium mr-2 mb-1 md:mb-0">{{ alert.alert }}</span>
+                    <div class="mt-1 text-muted-color">{{ alert.alertDescription }}</div>
+                </div>
+                <div class="mt-2 md:mt-0 flex items-center">
+                    <div class="bg-surface-300 dark:bg-surface-500 rounded-border overflow-hidden w-40 lg:w-24" style="height: 8px">
+                        <div class="bg-orange-500 h-full" [ngStyle]="{ width: orangeWidth(alert.alertCount) }"></div>
+                    </div>
+                    <span class="text-orange-500 ml-4 font-medium" style="min-width: 18px">{{ alert.alertCount }}</span>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

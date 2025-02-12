@@ -1,0 +1,65 @@
+<!-- FundName?: string | null;
+Rate?: number | null;
+GrossAccumulatedValue?: number | null;
+CurrentAllocationPercent?: number | null;
+FundExpense?: number | null; -->
+<!-- <p-fluid class="flex flex-col p-6 sm:px-8">
+    <div class="sm:col-span-8">
+        <div class="grid w-full gap-6 sm:grid-cols-8">
+            <div class="sm:col-span-2">
+                <div class="flex flex-col gap-2">
+                    <span class="text-secondary font-bold">Fund Name</span>
+                    <span>{{ fund().FundName ?? noData }}</span>
+                </div>
+            </div>
+            <div class="sm:col-span-2">
+                <div class="flex flex-col gap-2">
+                    <span class="text-secondary font-bold">Fund Name</span>
+                    <span>{{ (fund().Rate | currency) ?? noData }}</span>
+                </div>
+            </div>
+            <div class="sm:col-span-2">
+                <div class="flex flex-col gap-2">
+                    <span class="text-secondary font-bold">Accumulated Value</span>
+                    <span>{{ (fund().GrossAccumulatedValue | currency) ?? noData }}</span>
+                </div>
+            </div>
+            <div class="sm:col-span-2">
+                <div class="flex flex-col gap-2">
+                    <span class="text-secondary font-bold">Allocation Percent</span>
+                    <span>{{ (fund().CurrentAllocationPercent | currency) ?? noData }}</span>
+                </div>
+            </div>
+            <div class="sm:col-span-2">
+                <div class="flex flex-col gap-2">
+                    <span class="text-secondary font-bold">Fund Expense</span>
+                    <span>{{ (fund().FundExpense | currency) ?? noData }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</p-fluid> -->
+
+<!-- [showCurrentPageReport]="true" currentPageReportTemplate="{first} to {last} of {totalRecords} policies" -->
+<div>
+    <p-table [value]="funds() ?? []" [paginator]="true" [rows]="10" responsiveLayout="scroll" stripedRows showGridlines size="small">
+        <ng-template #header>
+            <tr>
+                <th pSortableColumn="FundName">Fund Name <p-sortIcon field="FundName"></p-sortIcon></th>
+                <th pSortableColumn="Rate">Rate <p-sortIcon field="Rate"></p-sortIcon></th>
+                <th pSortableColumn="GrossAccumulatedValue">Accumulated Value <p-sortIcon field="GrossAccumulatedValue"></p-sortIcon></th>
+                <th pSortableColumn="CurrentAllocationPercent">Allocation Percent <p-sortIcon field="CurrentAllocationPercent"></p-sortIcon></th>
+                <th pSortableColumn="FundExpense">Fund Expense <p-sortIcon field="FundExpense"></p-sortIcon></th>
+            </tr>
+        </ng-template>
+        <ng-template #body let-fund let-expanded="expanded">
+            <tr>
+                <td style="width: 20%; min-width: 7rem">{{ fund.FundName ?? noData }}</td>
+                <td style="width: 20%; min-width: 7rem">{{ (fund.Rate | percent: '1.0-2') ?? noData }}</td>
+                <td style="width: 20%; min-width: 7rem">{{ (fund.GrossAccumulatedValue | currency: 'USD') ?? noData }}</td>
+                <td style="width: 20%; min-width: 8rem">{{ (fund.CurrentAllocationPercent | percent: '1.0-2') ?? noData }}</td>
+                <td style="width: 20%; min-width: 8rem">{{ (fund.FundExpense | currency: 'USD') ?? noData }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

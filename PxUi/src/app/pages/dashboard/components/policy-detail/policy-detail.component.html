@@ -1,0 +1,254 @@
+<div class="surface-card p-4 shadow-2 border-round">
+    <div class="flex gap-2 pl-3">
+        <div class="text-xl font-medium font-bold">Contact Details:</div>
+        <div class="text-xl font-medium font-bold">{{ policy().PolicyNumber }}</div>
+    </div>
+    <p-fluid class="flex flex-col p-6 sm:px-8">
+        <div class="sm:col-span-8">
+            <div class="grid w-full gap-6 sm:grid-cols-8">
+                <div class="sm:col-span-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Carrier Name</span>
+                        <span>{{ policy().CarrierName ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Carrier Code</span>
+                        <span>{{ policy().CarrierCode ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Product Type</span>
+                        <span>{{ policy().ProductType ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Product Name</span>
+                        <span>{{ policy().ProductName ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Policy Value</span>
+                        <span>{{ (policy().PolicyValue | currency) ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Total Premium</span>
+                        <span>{{ (policy().TotalPremium | currency) ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Annualized Premium</span>
+                        <span>{{ (policy().AnnualizedPremium | currency) ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Issue Date</span>
+                        <span>{{ (policy().ContractIssueDate | date: 'yyyy-MM-dd') ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Maturity Date</span>
+                        <span>{{ (policy().MaturityDate | date: 'yyyy-MM-dd') ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Anniversary Date</span>
+                        <span>{{ (policy().AnniversaryDate | date: 'yyyy-MM-dd') ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Issue State</span>
+                        <span>{{ policy().IssueState ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Financial Advisor</span>
+                        <span>{{ policy().PolicyServicingFA ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Financial Advisor</span>
+                        <span>{{ policy().PolicyServicingFA ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Initial Premium</span>
+                        <span>{{ (policy().InitialPremium | currency) ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Withdrawal Amount</span>
+                        <span>{{ (policy().WithdrawalAmount | currency) ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Surrender Charge Expiry Date</span>
+                        <span>{{ (policy().SurrenderChargeExpiryDate | date: 'yyyy-MM-dd') ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Index Rate Renewal Date</span>
+                        <span>{{ (policy().IndexRateRenewalDate | date: 'yyyy-MM-dd') ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Interest Rate Effective Date</span>
+                        <span>{{ (policy().InterestRateEffectiveDate | date: 'yyyy-MM-dd') ?? noData }}</span>
+                    </div>
+                </div>
+                <div class="sm:col-span-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-secondary font-bold">Interest Rate Guarantee End Date</span>
+                        <span>{{ (policy().InterestRateGuaranteeEndDate | date: 'yyyy-MM-dd') ?? noData }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </p-fluid>
+
+    <p-fluid class="flex flex-col">
+        <p-tabs value="0">
+            <p-tablist>
+                <p-tab value="0">Funds</p-tab>
+                <p-tab value="1">Participants</p-tab>
+                <p-tab value="2">Riders</p-tab>
+                @if (showAdvisorAlerts) {
+                    <p-tab value="3">Advisor Alerts</p-tab>
+                }
+                @if (showDataAlerts) {
+                    <p-tab value="4">Data Alerts</p-tab>
+                }
+            </p-tablist>
+            <p-tabpanels>
+                <p-tabpanel value="0">
+                    <div>
+                        @if (policy().PolicyFunds) {
+                            <app-policy-fund [funds]="policy().PolicyFunds"></app-policy-fund>
+                        } @else {
+                            <p-fluid>
+                                <div class="flex flex-col items-center justify-center text-xl font-medium font-bold">***No Funds Exist***</div>
+                            </p-fluid>
+                        }
+                    </div>
+                </p-tabpanel>
+                <p-tabpanel value="1">
+                    @if (policy().PolicyParticipants) {
+                        <app-policy-participants [participants]="policy().PolicyParticipants"></app-policy-participants>
+                    } @else {
+                        <p-fluid>
+                            <div class="flex flex-col items-center justify-center text-xl font-medium font-bold">***No Participants Exist***</div>
+                        </p-fluid>
+                    }
+                </p-tabpanel>
+                <p-tabpanel value="2">
+                    @if (policy().PolicyBenefit) {
+                        <app-policy-benefits [benefits]="policy().PolicyBenefit"></app-policy-benefits>
+                    } @else {
+                        <p-fluid>
+                            <div class="flex flex-col items-center justify-center text-xl font-medium font-bold">***No Riders Exist***</div>
+                        </p-fluid>
+                    }
+                </p-tabpanel>
+                @if (showAdvisorAlerts) {
+                    <p-tabpanel value="3">
+                        @if (policy().AdvisorAlerts) {
+                            <app-policy-alert [alerts]="policy().AdvisorAlerts"></app-policy-alert>
+                        } @else {
+                            <p-fluid>
+                                <div class="flex flex-col items-center justify-center text-xl font-medium font-bold">***No Alerts Exist***</div>
+                            </p-fluid>
+                        }
+                    </p-tabpanel>
+                }
+                @if (showDataAlerts) {
+                    <p-tabpanel value="4">
+                        @if (policy().DataAlerts) {
+                            <app-policy-alert [alerts]="policy().DataAlerts"></app-policy-alert>
+                        } @else {
+                            <p-fluid>
+                                <div class="flex flex-col items-center justify-center text-xl font-medium font-bold">***No Alerts Exist***</div>
+                            </p-fluid>
+                        }
+                    </p-tabpanel>
+                }
+            </p-tabpanels>
+        </p-tabs>
+    </p-fluid>
+    <!--     <p-divider class="w-full bg-surface-200"></p-divider>
+
+    <div class="flex gap-2 pl-3">
+        <p-fluid>
+            <div class="text-xl font-medium font-bold">Funds</div>
+            @if (policy().PolicyFunds) {
+                <app-policy-fund [funds]="policy().PolicyFunds"></app-policy-fund>
+            } @else {
+                <p-fluid>
+                    <div class="flex flex-col items-center justify-center text-xl font-medium font-bold">***No Funds Exist***</div>
+                </p-fluid>
+            }
+        </p-fluid>
+    </div>
+
+    <p-divider class="w-full bg-surface-200"></p-divider>
+
+    <div class="flex gap-2 pl-3">
+        <p-fluid>
+            <div class="text-xl font-medium font-bold">Participants</div>
+            @if (policy().PolicyParticipants) {
+                <app-policy-participants [participants]="policy().PolicyParticipants"></app-policy-participants>
+            } @else {
+                <p-fluid>
+                    <div class="flex flex-col items-center justify-center text-xl font-medium font-bold">***No Participants Exist***</div>
+                </p-fluid>
+            }
+        </p-fluid>
+    </div>
+
+    <p-divider class="w-full bg-surface-200"></p-divider>
+
+    <div class="flex gap-2 pl-3">
+        <p-fluid>
+            <div class="text-xl font-medium font-bold">Riders</div>
+            @if (policy().PolicyBenefit) {
+                <app-policy-benefits [benefits]="policy().PolicyBenefit"></app-policy-benefits>
+            } @else {
+                <p-fluid>
+                    <div class="flex flex-col items-center justify-center text-xl font-medium font-bold">***No Riders Exist***</div>
+                </p-fluid>
+            }
+        </p-fluid>
+    </div>
+
+    <p-divider class="w-full bg-surface-200"></p-divider>
+
+    <div class="flex gap-2 pl-3">
+        <p-fluid>
+            <div class="text-xl font-medium font-bold">Alerts</div>
+            @if (policy().Alerts) {
+                <app-policy-alert [alerts]="policy().Alerts"></app-policy-alert>
+            } @else {
+                <p-fluid>
+                    <div class="flex flex-col items-center justify-center text-xl font-medium font-bold">***No Alerts Exist***</div>
+                </p-fluid>
+            }
+        </p-fluid>
+    </div> -->
+</div>

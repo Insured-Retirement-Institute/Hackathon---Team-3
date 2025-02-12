@@ -1,0 +1,18 @@
+<p-table [value]="benefits() ?? []" [paginator]="true" [rows]="10" responsiveLayout="scroll" stripedRows showGridlines size="small">
+    <ng-template #header>
+        <tr>
+            <th pSortableColumn="RiderCategory">Category <p-sortIcon field="RiderCategory"></p-sortIcon></th>
+            <th pSortableColumn="RiderType">Type <p-sortIcon field="RiderType"></p-sortIcon></th>
+            <th pSortableColumn="RiderSubType">Sub-Type <p-sortIcon field="RiderSubType"></p-sortIcon></th>
+            <th pSortableColumn="RiderValue">Value <p-sortIcon field="RiderValue"></p-sortIcon></th>
+        </tr>
+    </ng-template>
+    <ng-template #body let-benefit>
+        <tr>
+            <td style="width: 25%; min-width: 8rem">{{ benefit.RiderCategory ?? noData }}</td>
+            <td style="width: 25%; min-width: 8rem">{{ benefit.RiderType ?? noData }}</td>
+            <td style="width: 25%; min-width: 8rem">{{ benefit.RiderSubType ?? noData }}</td>
+            <td style="width: 20%; min-width: 7rem">{{ (benefit.RiderValue | currency: 'USD') ?? noData }}</td>
+        </tr>
+    </ng-template>
+</p-table>

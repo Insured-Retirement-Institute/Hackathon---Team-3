@@ -1,0 +1,10 @@
+<div class="card flex flex-col !mb-8">
+    <div class="font-semibold text-2xl mb-4">Carrier Analysis</div>
+
+    <div class="md:w-1/2">
+        <p-select [(ngModel)]="dropdownValue" [options]="dropdownValues" optionLabel="label" placeholder="Select Alert" (onChange)="alertChange($event)" class="dropdown" />
+    </div>
+    <div class="pt-8">
+        <p-chart type="bar" [data]="chartData" [options]="chartOptions" class="h-full" />
+    </div>
+</div>

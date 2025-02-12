@@ -1,0 +1,18 @@
+<p-table [value]="alerts() ?? []" [paginator]="true" [rows]="10" responsiveLayout="scroll" stripedRows showGridlines size="small">
+    <ng-template #header>
+        <tr>
+            <th pSortableColumn="MessageCode">Code <p-sortIcon field="MessageCode"></p-sortIcon></th>
+            <th pSortableColumn="MessageDescription">Description <p-sortIcon field="MessageDescription"></p-sortIcon></th>
+            <!-- <th pSortableColumn="MessageStartTime">CreateDate <p-sortIcon field="MessageStartTime"></p-sortIcon></th> -->
+            <th pSortableColumn="MessageSeverityCode">Severity <p-sortIcon field="MessageSeverityCode"></p-sortIcon></th>
+        </tr>
+    </ng-template>
+    <ng-template #body let-alert>
+        <tr>
+            <td style="width: 20%; min-width: 8rem">{{ alert.MessageCode ?? noData }}</td>
+            <td style="width: 60%; min-width: 8rem">{{ alert.MessageDescription ?? noData }}</td>
+            <!-- <td style="width: 25%; min-width: 8rem">{{ (alert.MessageStartTime | date: 'yyyy-MM-dd') ?? noData }}</td> -->
+            <td style="width: 20%; min-width: 7rem">{{ alert.MessageSeverityCode ?? noData }}</td>
+        </tr>
+    </ng-template>
+</p-table>
