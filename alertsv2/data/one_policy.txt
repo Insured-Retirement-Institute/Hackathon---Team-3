@@ -1,0 +1,75 @@
+[
+    {
+        "CarrierName": "Carrier",
+        "CarrierCode": "CAR",
+        "PolicyNumber": "015701561",
+        "ProductType": "FIXED",
+        "ProductName": "NATIONWIDE DEFENDER ANNUITY",
+        "PolicyValue": 26513.48,
+        "TotalPremium": 25000.00,
+        "AnnualizedPremium": null,
+        "ContractIssueDate": "2023-02-20",
+        "MaturityDate": null,
+        "AnniversaryDate": null,
+        "IssueState": "FL",
+        "PolicyServicingFA": null,
+        "InitialPremium": 25000.00,
+        "WithdrawalAmount": 0.00,
+        "SurrenderChargeExpiryDate": "2029-02-20",
+        "IndexRateRenewalDate": "2025-02-20",
+        "InterestRateEffectiveDate": "2025-02-20",
+        "InterestRateGuaranteeEndDate": "2025-02-20",
+        "PolicyFunds":
+        [
+            {
+                "FundName": "OFXFQ",
+                "Rate": 0.04,
+                "GrossAccumulatedValue": 26513.48,
+                "CurrentAllocationPercent": 100,
+                "FundExpense": 0
+            }
+        ],
+        "PolicyParticipants":
+        [
+            {
+                "ClientName": "BUFFER RILA AUTOMATION",
+                "ClientType": "OWNER",
+                "ClientState": "FL",
+                "ClientAge": 71
+            },
+            {
+                "ClientName": "BUFFER RILA AUTOMATION",
+                "ClientType": "ANNUITANT",
+                "ClientState": "FL",
+                "ClientAge": 71
+            }
+        ],
+        "PolicyBenefit":
+        [
+            {
+                "RiderCategory": 100,
+                "RiderType": "DEATH BENEFIT",
+                "RiderSubType": "RETURN OF PREMIUM DEATH BENEFIT OPTION",
+                "RiderValue": 250000
+            },
+            {
+                "RiderCategory": 200,
+                "RiderType": "CDSC",
+                "RiderSubType": "CDSC 8,8,7,6,5,4",
+                "RiderValue": null
+            },
+            {
+                "RiderCategory": 300,
+                "RiderType": "W/D WITHOUT CHG",
+                "RiderSubType": "WITHDRAWAL WITHOUT CHARGE FOR RILA",
+                "RiderValue": null
+            },
+            {
+                "RiderCategory": 850,
+                "RiderType": "MVA",
+                "RiderSubType": "MARKET VALUE ADJUSTMENT",
+                "RiderValue": null
+            }
+        ]
+    }
+]
