@@ -1,0 +1,36 @@
+.summary-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .charts {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .chart {
+    width: 45%;
+  }
+
+  .notification {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    z-index: 1000; /* Ensure it appears above other content */
+  }

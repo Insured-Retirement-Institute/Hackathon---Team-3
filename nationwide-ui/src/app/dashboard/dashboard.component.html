@@ -1,0 +1,53 @@
+<div class="summary-cards">
+    <div class="card">
+      <h3>Total Contracts</h3>
+      <p>{{ response.length }}</p>
+    </div>
+    <div class="card">
+      <h3>Total Alerts</h3>
+      <p>{{ totalSystemMessages }}</p>
+    </div>
+  </div>
+  
+  <div class="charts">
+    <div class="chart">
+      <h3>Alerts by Type</h3>
+      <ngx-charts-pie-chart
+        [results]="alertsByType"
+        [legend]="true"
+        [labels]="true"
+        [doughnut]="false"
+        [explodeSlices]="false"
+        [gradient]="false">
+      </ngx-charts-pie-chart>
+    </div>
+    <div class="chart">
+      <h3>Alerts by Product Type</h3>
+      <ngx-charts-bar-vertical
+        [results]="alertsByProductType"
+        [legend]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Product Type'"
+        [yAxisLabel]="'Number of Alerts'">
+      </ngx-charts-bar-vertical>
+    </div>
+    <div class="chart">
+      <h3>Alerts Over Time</h3>
+      <ngx-charts-line-chart
+        [results]="alertsOverTime"
+        [legend]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Date'"
+        [yAxisLabel]="'Number of Alerts'">
+      </ngx-charts-line-chart>
+    </div>
+  </div>
+  <div *ngIf="showNotification" @fadeInOut class="notification">
+    <p>New Alert Notification Received</p>
+</div>

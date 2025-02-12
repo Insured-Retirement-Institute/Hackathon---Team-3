@@ -1,0 +1,55 @@
+<h2 mat-dialog-title>Contract Alerts for {{ contractNumber }}</h2>
+<div mat-dialog-content>
+  <table mat-table [dataSource]="systemMessages" class="mat-elevation-z8">
+    <ng-container matColumnDef="contractNumber">
+      <th mat-header-cell *matHeaderCellDef> Contract Number </th>
+      <td mat-cell *matCellDef="let contractNumber"> {{ contractNumber }} </td>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="Subject">
+      <th mat-header-cell *matHeaderCellDef> Subject</th>
+      <td mat-cell *matCellDef="let systemMessages"> {{ systemMessages.messageSubject }} </td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="Description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let systemMessages"> {{ systemMessages.messageDescription }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Severity Code">
+      <th mat-header-cell *matHeaderCellDef> Message Severity </th>
+      <td mat-cell *matCellDef="let systemMessages">
+        <span
+          class="severity-circle"
+          [ngClass]="{
+            'severity-1': systemMessages.messageSeverityCode === 1,
+            'severity-2': systemMessages.messageSeverityCode === 2,
+            'severity-3': systemMessages.messageSeverityCode === 3
+          }"
+        ></span>
+         <!-- {{ systemMessages.messageSeverityCode }}  -->
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<!-- Chat Interface -->
+<div class="chat-container">
+  <div class="chat-header">
+    <h3>Ask Annuity Assistant for More Information</h3>
+  </div>
+  <div class="chat-messages">
+    <div *ngFor="let message of chatMessages" class="chat-message">
+      <p>{{ message }}</p>
+    </div>
+  </div>
+  <div class="chat-input">
+    <input type="text" [(ngModel)]="userMessage" placeholder="Type your message here..." />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>

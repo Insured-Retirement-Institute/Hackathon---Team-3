@@ -1,0 +1,48 @@
+<input class="inbox-search" type="text" [(ngModel)]="searchText" placeholder="Search..." />
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Contract Number</th>
+        <th>Recieved Date</th>
+        <th>Carrier Name</th>
+        <th>Line of Business</th>
+        <th>Product Type</th>
+        <th>Inbox</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let policy of response | filter:searchText">
+          <td>{{ policy.polNumber }}</td>
+          <td>{{ policy.alertReceivedDate }}</td>
+          <td>{{ policy.carrierName }}</td>
+          <td>{{ policy.lineOfBusiness }}</td>
+          <td>{{ policy.productType }}</td>
+          <td class="inbox-cell" (click)="openAlerts(policy)">
+            <div class="icon-container">
+              <mat-icon class="bell-icon">notifications</mat-icon>
+              <span class="notification-badge">{{ policy.systemMessages.length }}</span>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  <div *ngIf="showNotification" @fadeInOut class="notification">
+    <p>New Alert Notification Received</p>
+  </div>
+</div>
+<!-- Chat Interface -->
+<div class="chat-container">
+  <div class="chat-header">
+    <h3>Ask Annuity Assistant for More Information</h3>
+  </div>
+  <div class="chat-messages">
+    <div *ngFor="let message of chatMessages" class="chat-message">
+      <p>{{ message }}</p>
+    </div>
+  </div>
+  <div class="chat-input">
+    <input type="text" [(ngModel)]="userMessage" placeholder="Type your message here..." />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>

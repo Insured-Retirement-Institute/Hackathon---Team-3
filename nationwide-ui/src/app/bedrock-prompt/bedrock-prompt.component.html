@@ -1,0 +1,9 @@
+<div>
+    <label for="prompt">Prompt:</label>
+    <input id="prompt" [(ngModel)]="prompt" placeholder="Enter your prompt">
+    <button (click)="generateOutput()">Generate Output</button>
+  </div>
+  <div *ngIf="output">
+    <h3>Output:</h3>
+    <p>{{ output }}</p>
+</div>
