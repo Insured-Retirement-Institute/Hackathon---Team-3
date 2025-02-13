@@ -1,0 +1,59 @@
+<TXLife MetaDataKey="MS" Version="2.37" id="_4692d353-d703-4ee0-b743-7a2db0203d91">
+    <UserAuthRequest>
+        <VendorApp>
+            <VendorName>Test</VendorName>
+            <AppName>Test</AppName>
+            <AppVer>1.0</AppVer>
+        </VendorApp>
+        <UserLoginName>P0L313</UserLoginName>
+    </UserAuthRequest>
+    <TXLifeRequest PrimaryObjectID="_5b5f4027-8481-459e-9d96-0983a441bee0"
+        id="_98f59b7a-359c-49e1-85cb-32237f14fe27">
+        <TransRefGUID>_2a7af9a5-1e22-4c04-93be-d9d08f507905</TransRefGUID>
+        <TransType tc="1214">New Business Submission for a Policy</TransType>
+        <TransSubType tc="18800">Add or Update System Messages</TransSubType>
+        <TransExeDate>2025-01-26</TransExeDate>
+        <TransExeTime>15:48:52</TransExeTime>
+        <CorrelationGUID>2025-01-20-04.39.49.681977</CorrelationGUID>
+        <OLifE>
+            <Holding id="_92f175ca-a8e4-46ad-8b87-b62bb7d9d364">
+                <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+                <HoldingStatus tc="1">Active the Holding is in force</HoldingStatus>
+                <Policy>
+                    <PolNumber>101054125</PolNumber>
+                    <LineOfBusiness tc="2">Annuity</LineOfBusiness>
+                    <ProductType tc="10">Variable Annuity</ProductType>
+                    <ProductCode>89355V436_MSSB</ProductCode>
+                    <CarrierCode>86231</CarrierCode>
+                    <PlanName>Transamerica B-Share (2020 version)</PlanName>
+                    <Jurisdiction tc="6">California</Jurisdiction>
+                    <CusipNum>89355V436</CusipNum>
+                </Policy>
+                <SystemMessage id="_3825da11-15ab-4eb0-9f64-b5afa12451b8">
+                    <MessageCode>1000600012</MessageCode>
+                    <Sequence>4</Sequence>
+                    <RelatedObjectType>179</RelatedObjectType>
+                    <MessageDescription>This is Test Alert Description</MessageDescription>
+                    <MessageSeverityCode>1</MessageSeverityCode>
+                    <MessageStartDate>2025-01-26</MessageStartDate>
+                    <MessageType>2</MessageType>
+                    <MessageSubject>This is Test Alert subject</MessageSubject>
+                    <MessageSourceUserID>System</MessageSourceUserID>
+                    <MessageStartTime>15:48:52</MessageStartTime>
+                </SystemMessage>
+                <SystemMessage id="_3825da11-15ab-4eb0-9f64-b5afa12451b8">
+                    <MessageCode>1000600012</MessageCode>
+                    <Sequence>4</Sequence>
+                    <RelatedObjectType>179</RelatedObjectType>
+                    <MessageDescription>This is Test Alert Description</MessageDescription>
+                    <MessageSeverityCode>1</MessageSeverityCode>
+                    <MessageStartDate>2025-01-26</MessageStartDate>
+                    <MessageType>2</MessageType>
+                    <MessageSubject>This is Test Alert subject</MessageSubject>
+                    <MessageSourceUserID>System</MessageSourceUserID>
+                    <MessageStartTime>15:48:52</MessageStartTime>
+                </SystemMessage>
+            </Holding>
+        </OLifE>
+    </TXLifeRequest>
+</TXLife>

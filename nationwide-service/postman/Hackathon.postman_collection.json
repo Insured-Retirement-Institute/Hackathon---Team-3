@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "201b9742-c67a-4f33-9cee-f7d10282b3d4",
+		"name": "Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23258946",
+		"_collection_link": "https://nationwide.postman.co/workspace/Yaman's-Workspace~6864b488-20b0-41d8-b031-6b43de1162c8/collection/23258946-201b9742-c67a-4f33-9cee-f7d10282b3d4?action=share&source=collection_link&creator=23258946"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/txlife",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/txlife",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"txlife"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/txlife XML",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<TXLife MetaDataKey=\"MS\" Version=\"2.37\" id=\"_4692d353-d703-4ee0-b743-7a2db0203d91\">\r\n    <UserAuthRequest>\r\n        <VendorApp>\r\n            <VendorName>Test</VendorName>\r\n            <AppName>Test</AppName>\r\n            <AppVer>1.0</AppVer>\r\n        </VendorApp>\r\n        <UserLoginName>P0L313</UserLoginName>\r\n    </UserAuthRequest>\r\n    <TXLifeRequest PrimaryObjectID=\"_5b5f4027-8481-459e-9d96-0983a441bee0\"\r\n        id=\"_98f59b7a-359c-49e1-85cb-32237f14fe27\">\r\n        <TransRefGUID>_2a7af9a5-1e22-4c04-93be-d9d08f507905</TransRefGUID>\r\n        <TransType tc=\"1214\">New Business Submission for a Policy</TransType>\r\n        <TransSubType tc=\"18800\">Add or Update System Messages</TransSubType>\r\n        <TransExeDate>2025-01-26</TransExeDate>\r\n        <TransExeTime>15:48:52</TransExeTime>\r\n        <CorrelationGUID>2025-01-20-04.39.49.681977</CorrelationGUID>\r\n        <OLifE>\r\n            <Holding id=\"_92f175ca-a8e4-46ad-8b87-b62bb7d9d364\">\r\n                <HoldingTypeCode tc=\"2\">Policy</HoldingTypeCode>\r\n                <HoldingStatus tc=\"1\">Active the Holding is in force</HoldingStatus>\r\n                <Policy>\r\n                    <PolNumber>101054125</PolNumber>\r\n                    <LineOfBusiness tc=\"2\">Annuity</LineOfBusiness>\r\n                    <ProductType tc=\"10\">Variable Annuity</ProductType>\r\n                    <ProductCode>89355V436_MSSB</ProductCode>\r\n                    <CarrierCode>86231</CarrierCode>\r\n                    <PlanName>Transamerica B-Share (2020 version)</PlanName>\r\n                    <Jurisdiction tc=\"6\">California</Jurisdiction>\r\n                    <CusipNum>89355V436</CusipNum>\r\n                </Policy>\r\n                <SystemMessage id=\"_3825da11-15ab-4eb0-9f64-b5afa12451b8\">\r\n                    <MessageCode>1000600012</MessageCode>\r\n                    <Sequence>4</Sequence>\r\n                    <RelatedObjectType>179</RelatedObjectType>\r\n                    <MessageDescription>This is Test Alert Description</MessageDescription>\r\n                    <MessageSeverityCode>1</MessageSeverityCode>\r\n                    <MessageStartDate>2025-01-26</MessageStartDate>\r\n                    <MessageType>2</MessageType>\r\n                    <MessageSubject>This is Test Alert subject</MessageSubject>\r\n                    <MessageSourceUserID>System</MessageSourceUserID>\r\n                    <MessageStartTime>15:48:52</MessageStartTime>\r\n                </SystemMessage>\r\n                <SystemMessage id=\"_3825da11-15ab-4eb0-9f64-b5afa12451b8\">\r\n                    <MessageCode>1000600012</MessageCode>\r\n                    <Sequence>4</Sequence>\r\n                    <RelatedObjectType>179</RelatedObjectType>\r\n                    <MessageDescription>This is Test Alert Description</MessageDescription>\r\n                    <MessageSeverityCode>1</MessageSeverityCode>\r\n                    <MessageStartDate>2025-01-26</MessageStartDate>\r\n                    <MessageType>2</MessageType>\r\n                    <MessageSubject>This is Test Alert subject</MessageSubject>\r\n                    <MessageSourceUserID>System</MessageSourceUserID>\r\n                    <MessageStartTime>15:48:52</MessageStartTime>\r\n                </SystemMessage>\r\n            </Holding>\r\n        </OLifE>\r\n    </TXLifeRequest>\r\n</TXLife>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/xml/txlife",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"xml",
+						"txlife"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/txlife  JSON",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"TXLife\": {\r\n    \"MetaDataKey\": \"MS\",\r\n    \"Version\": \"1.0\",\r\n    \"id\": \"_4692d353-d703-4ee0-b743-7a2db0203d91\",\r\n    \"TXLifeRequest\": {\r\n      \"PrimaryObjectID\": \"_5b5f4027-8481-459e-9d96-0983a441bee0\",\r\n      \"id\": \"_98f59b7a-359c-49e1-85cb-32237f14fe27\",\r\n      \"TransRefGUID\": \"_2a7af9a5-1e22-4c04-93be-d9d08f507905\",\r\n      \"TransType\": {\r\n        \"tc\": \"1214\",\r\n        \"value\": \"Proformex Alert Message\"\r\n      },\r\n      \"TransSubType\": {\r\n        \"tc\": \"18800\",\r\n        \"value\": \"Data Quality Alert\"\r\n      },\r\n      \"TransExeDate\": \"2025-01-26\",\r\n      \"TransExeTime\": \"15:48:52\",\r\n      \"CorrelationGUID\": \"2025-01-20-04.39.49.681977\",\r\n      \"OLifE\": {\r\n        \"Holding\": {\r\n          \"id\": \"_92f175ca-a8e4-46ad-8b87-b62bb7d9d364\",\r\n          \"HoldingTypeCode\": {\r\n            \"tc\": \"2\",\r\n            \"value\": \"Policy\"\r\n          },\r\n          \"HoldingStatus\": {\r\n            \"tc\": \"1\",\r\n            \"value\": \"Active the Holding is in force\"\r\n          },\r\n          \"Policy\": {\r\n            \"PolNumber\": \"101054126\",\r\n            \"LineOfBusiness\": {\r\n              \"tc\": \"2\",\r\n              \"value\": \"Annuity\"\r\n            },\r\n            \"ProductType\": {\r\n              \"tc\": \"10\",\r\n              \"value\": \"Variable Annuity\"\r\n            },\r\n            \"CarrierName\": \"Name of Carrier\",\r\n            \"PlanName\": \"Name of plan\"\r\n          },\r\n          \"SystemMessage\": [\r\n            {\r\n              \"MessageCode\": \"2\",\r\n              \"MessageDescription\": \"Index Rate Renewal Date is within the next 30 days\",\r\n              \"MessageStartTime\": \"15:48:52\",\r\n              \"MessageSeverityCode\": \"3\"\r\n            },\r\n            {\r\n              \"MessageCode\": \"2\",\r\n              \"MessageDescription\": \"Index Rate Renewal Date is within the next 30 days\",\r\n              \"MessageStartTime\": \"15:50:52\",\r\n              \"MessageSeverityCode\": \"2\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/json/txlife",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"json",
+						"txlife"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

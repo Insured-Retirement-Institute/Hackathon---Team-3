@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { SystemMessage } from '../interface/systemmessage';
 
 @Pipe({
   name: 'filter',
@@ -19,7 +20,10 @@ export class FilterPipe implements PipeTransform {
              item.carrierName.toLowerCase().includes(searchText) ||
              item.lineOfBusiness.toLowerCase().includes(searchText) ||
              item.productType.toLowerCase().includes(searchText) ||
-             item.alertReceivedDate.toLowerCase().includes(searchText);
-      });
+             item.alertReceivedDate.toLowerCase().includes(searchText) ||
+             (item.systemMessages && item.systemMessages.some((message: SystemMessage) => 
+               message.messageDescription.toLowerCase().includes(searchText)
+             ));
+    })
   }
 }
